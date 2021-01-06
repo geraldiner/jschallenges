@@ -1,10 +1,10 @@
-# JavaScript Practice
+# JavaScript Challenges
 I noticed that my JavaScript is still leagues behind my HTML/CSS, so I'm taking on any challenge I come across to level up.
  
-*Link to project:** #
+*Link to project:* https://geraldiner.com/jschallenges
  
 # How It's Made:
-*Tech used:** HTML, CSS, JavaScript
+*Tech used:* HTML, CSS, JavaScript
 
 The HTML/CSS is minimal because I want to highlight my JavaSript skills. But as a designer first, it has to look good.
  

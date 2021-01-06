@@ -1,0 +1,21 @@
+header > a > img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+header > a > span {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.social li {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
