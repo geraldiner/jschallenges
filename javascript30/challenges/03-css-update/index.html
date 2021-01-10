@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>03-CSS Update with JavaScript | JavaScript30</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link ref='stylesheet' href='normalize.css/normalize.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../../css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css-update.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script async src='../../js/script.js'></script>
+  <script async src='css-update.js'></script>
+</head>
+
+<body>
+  <main class='wrap'>
+    <section id='codearea'>
+      <section id='codewrap'>
+        <h1>Use the controls to edit the image.</h1>
+        <section class="controls">
+          <label for="spacing">Border:</label>
+          <input type="range" name="spacing" min="10" max="80" value="10" data-sizing="px">
+
+          <label for="blur">Blur:</label>
+          <input type="range" name="blur" min="0" max="25" value="5" data-sizing="px">
+
+          <label for="base">Border Color:</label>
+          <input type="color" name="base" value="#0045ab">
+        </section>
+
+        <section class="img-container">
+          <img src="https://images.pexels.com/photos/656195/pexels-photo-656195.jpeg"
+            alt="Space Needle - Seattle, WA" />
+        </section>
+      </section>
+      <section class='scroll-down'>
+        <section class='mouse'><span></span></section>
+      </section>
+    </section>
+
+    <section id='post-wrap'>
+      <nav id='nav'>
+        <div class='nav-wrap'>
+          <div class='row'>
+            <div class='column'>
+              <a href='/jschallenges/javascript30/'>← Back to JavaScript30</a>
+            </div>
+            <div class='column' id='blog-title'>
+              <p>Day 03: CSS Update with JavaScript</p>
+            </div>
+            <div class='column'>
+              <ul id='social'>
+                <li><a href='https://linkedin.com/in/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-linkedin'></i></a></li>
+                <li><a href='https://github.com/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-github'></i></a></li>
+                <li><a href='https://twitter.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-twitter'></i></a></li>
+                <li><a href='https: //instagram.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-instagram'></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id='postarea'>
+        <h2 class="day">Day 03</h2>
+        <h1 class="title">Updating CSS with JavaScript</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          Today's prompt is using JavaScript to update CSS variables in the DOM. In the example, you can use a slider to
+          adjust the spacing of the image from the top-left corner, the blur, and the base color (wherever it may be
+          referenced).
+        </p>
+        <p>
+          For this prompt, I decided to follow along with the video since I hadn't really worked with this before.
+        </p>
+
+        <h3 class="section">Solution</h3>
+        <p>As always, I set up the HTML first. There is the title that shows what the page is all about, with the "JS"
+          part in a different color to show the base color changing with the color picker.</p>
+        <p>The controls are simple different types of input. There is a "data-sizing" attribute on the Spacing and Blur
+          inputs because we need those to update them with the JavaScript later.</p>
+        <p>Truthfully, I had no idea what :root was, and I'm still a bit confused on what it is. But after watching the
+          video, my understanding is that it's like setting a global constant variable, which you can use in any other
+          of the elements' css. Changing
+          that one variable, changes all of them. So this is what we're doing with the spacing, blur, and color. That's
+          why when the color is changed, the background of the image and the color of the JS part are changed at the
+          same time.</p>
+        <p>With the event listeners on the input tags, we can access the value and name of the input to make sure we're
+          changin the correct variable. For the Spacing and Blur values, we also need to add the 'px' suffix to ensure
+          that the property gets read
+          correctly.
+        </p>
+
+        <h3 class="section">Lessons Learned</h3>
+        <p>I know that these are probably really simple "tricks" but learning them for the first time makes me think how
+          magical web development can be. A lot of the time, my problems come from not knowing the syntax, but with a
+          lot more practice I know I
+          can get better at it.</p>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>

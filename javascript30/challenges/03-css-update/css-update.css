@@ -1,0 +1,27 @@
+:root {
+  --base: #0045ab;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+.img-container {
+  height: 50vh;
+  margin: 0 auto;
+}
+
+img {
+  margin: auto;
+  max-height: 100%;
+  padding: var(--spacing);
+  background: var(--base);
+  margin-top: 20px;
+  filter: blur(var(--blur));
+}
+
+label {
+  font-size: 2em;
+}
+
+span {
+  color: var(--base);
+}
