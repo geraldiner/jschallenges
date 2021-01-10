@@ -10,75 +10,143 @@
   <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script src='script.js'></script>
+  <script async src='script.js'></script>
 </head>
 
 <body>
-  <main>
+  <main class="wrap">
     <section id="codearea">
-      <section class="keys">
-        <div data-key="65" class="key">
-          <kbd>A</kbd>
-          <span class="sound">clap</span>
-        </div>
-        <div data-key="83" class="key">
-          <kbd>S</kbd>
-          <span class="sound">hihat</span>
-        </div>
-        <div data-key="68" class="key">
-          <kbd>D</kbd>
-          <span class="sound">kick</span>
-        </div>
-        <div data-key="70" class="key">
-          <kbd>F</kbd>
-          <span class="sound">openhat</span>
-        </div>
-        <div data-key="71" class="key">
-          <kbd>G</kbd>
-          <span class="sound">boom</span>
-        </div>
-        <div data-key="72" class="key">
-          <kbd>H</kbd>
-          <span class="sound">ride</span>
-        </div>
-        <div data-key="74" class="key">
-          <kbd>J</kbd>
-          <span class="sound">snare</span>
-        </div>
-        <div data-key="75" class="key">
-          <kbd>K</kbd>
-          <span class="sound">tom</span>
-        </div>
-        <div data-key="76" class="key">
-          <kbd>L</kbd>
-          <span class="sound">tink</span>
-        </div>
-      </section>
+      <section id="codewrap">
+        <h1>Press any of the keys below on your keyboard to play the sound.</h1>
+        <section class="keys">
 
-      <section id="audio-files">
-        <audio data-key="65"
-          src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/clap_tavc7w.wav"></audio>
-        <audio data-key="83"
-          src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/hihat_p0hz95.wav"></audio>
-        <audio data-key="68"
-          src="https://res.cloudinary.com/geraldiner/video/upload/v1524263829/kick_yuo9oj.wav"></audio>
-        <audio data-key="70"
-          src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/openhat_dvevys.wav"></audio>
-        <audio data-key="71"
-          src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/boom_xaxqkk.wav"></audio>
-        <audio data-key="72"
-          src="https://res.cloudinary.com/geraldiner/video/upload/v1524263831/ride_bpqvft.wav"></audio>
-        <audio data-key="74"
-          src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/snare_gutvqi.wav"></audio>
-        <audio data-key="75"
-          src="https://res.cloudinary.com/geraldiner/video/upload/v1524263831/tom_sms4h0.wav"></audio>
-        <audio data-key="76"
-          src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/tink_htllwf.wav"></audio>
+          <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+          </div>
+          <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+          </div>
+          <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+          </div>
+          <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+          </div>
+          <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+          </div>
+          <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+          </div>
+          <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+          </div>
+          <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+          </div>
+          <div data-key="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+          </div>
+        </section>
+
+        <section id="audio-files">
+          <audio data-key="65"
+            src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/clap_tavc7w.wav"></audio>
+          <audio data-key="83"
+            src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/hihat_p0hz95.wav"></audio>
+          <audio data-key="68"
+            src="https://res.cloudinary.com/geraldiner/video/upload/v1524263829/kick_yuo9oj.wav"></audio>
+          <audio data-key="70"
+            src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/openhat_dvevys.wav"></audio>
+          <audio data-key="71"
+            src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/boom_xaxqkk.wav"></audio>
+          <audio data-key="72"
+            src="https://res.cloudinary.com/geraldiner/video/upload/v1524263831/ride_bpqvft.wav"></audio>
+          <audio data-key="74"
+            src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/snare_gutvqi.wav"></audio>
+          <audio data-key="75"
+            src="https://res.cloudinary.com/geraldiner/video/upload/v1524263831/tom_sms4h0.wav"></audio>
+          <audio data-key="76"
+            src="https://res.cloudinary.com/geraldiner/video/upload/v1524263830/tink_htllwf.wav"></audio>
+        </section>
       </section>
     </section>
-    <nav id="sticky-nav">
 
-    </nav>
+    <section id="post-wrap">
+      <nav id="nav">
+        <div class="nav-wrap">
+          <div class="row">
+            <div class="column">
+              <a href="/javascript30/">← Back to JavaScript30</a>
+            </div>
+            <div class="column text-right" id="blog-title">
+              <p>Day 01: Drum Kit</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id="postarea">
+        <h2 class="day">Day 01</h2>
+        <h1 class="title">Drum Kit</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          For this challenge I tried to do it on my own before watching the full video. I figured that you need to
+          assign each button with the letter it’s supposed to be and bind it somehow to an event that listens for when
+          it’s been pushed down. And when it has
+          been pushed down, the sound will play. Unfortunately, I haven’t dealt with sound before or with events for
+          keys being pushed down.
+        </p>
+        <p>
+          So, what I need the program to do is:
+        <ul>
+          <li>Set up the keys with event listeners bound to their letter</li>
+          <li>When the letter is pushed down, the sound plays</li>
+        </ul>
+        </p>
+
+        <h3 class="section">Solution</h3>
+        <p>I really wanted to use Bootstrap’s <code>.button</code> class, but I am committed to the Vanilla
+          everything.
+          In building websites and web apps, I first break the page into its components, such as a container for the
+          keys and the individual keys themselves, which
+          I made to mimic the keyboard keys they would be bound to.</p>
+        <p>Most of this was easy to put together, but when it came to formatting the buttons, I was lost on how to get
+          them equally spaced from each other. Without Bootstrap, I was forced to learn <code>display: flex</code> and
+          <code>justify-content: space-between</code>. It’s always
+          nice to find out how things work under the hood.
+        </p>
+        <p>From there, I knew how I wanted the JavaScript to work, but wasn’t sure how to implement it. I consulted
+          the
+          video and learned about the data-key attribute, which you use to link the key being pressed to the sound
+          file
+          you want played. Then it was
+          just a matter of accessing the elements through the DOM and writing a function to not only play the sound
+          when
+          the key is pressed, but to apply the css to differentiate it from the other keys. We also have to account
+          for
+          when the key is released,
+          which means it should go back to the original state.</p>
+
+        <h3 class="section">Lessons Learned</h3>
+        <p>As a designer, I realized that I spent way more time putting the page together than I probably needed to.
+          Once the core functionality was done, I wanted to put together a Guitar Hero feel, hence the background
+          image.
+          I also chose colors from the
+          background for the keys to keep the theme going. As far as JavaScript goes, this was a fun first challenge
+          and
+          I’ve already learned a lot, so I’m looking forward to the next one!</p>
+      </section>
+    </section>
   </main>
 </body>
 

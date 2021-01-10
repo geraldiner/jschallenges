@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
 .keys {
   display: flex;
   justify-content: space-between;
@@ -51,7 +54,7 @@ body {
   margin: 30px 0;
 }
 
-.code-wrap {
+#codewrap {
   width: 80%;
   margin: auto;
   padding: 50px 0;
@@ -98,7 +101,7 @@ p {
   margin: 0;
 }
 
-.post-wrap {
+#post-wrap {
   color: rgba(0, 0, 0, 0.8);
   font-family: "Roboto", sans-serif;
 }
@@ -114,7 +117,7 @@ p {
   clear: both;
 }
 
-.nav {
+#nav {
   margin-top: -40px;
   position: relative;
   background-color: white;
@@ -125,7 +128,7 @@ p {
   width: 100%;
 }
 
-.fixed-nav .nav {
+.fixed-nav #nav {
   position: fixed;
   margin-top: 0;
   top: 0px;
@@ -136,14 +139,8 @@ p {
   padding: 0 8%;
 }
 
-.fixed-nav .postarea {
-  transform: scale(1);
-}
-
-.postarea {
+#postarea {
   padding: 70px 25%;
-  transform: scale(0.98);
-  transition: transform 0.5s;
 }
 
 h2.day {
@@ -175,13 +172,13 @@ h3.section:not(:nth-child(3)) {
   margin-top: 40px;
 }
 
-.postarea p {
+#postarea p {
   font-size: 12pt;
   line-height: 20pt;
   margin-bottom: 15px;
 }
 
-.postarea ul {
+#postarea ul {
   font-size: 11.5pt;
   line-height: 18pt;
 }
@@ -195,11 +192,11 @@ h3.section:not(:nth-child(3)) {
     padding: 0 30px;
   }
 
-  .nav {
+  #stick-nav {
     line-height: initial;
   }
 
-  .postarea {
+  #postarea {
     padding: 50px 50px;
   }
 }
