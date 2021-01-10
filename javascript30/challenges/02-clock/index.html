@@ -4,21 +4,31 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>01-Drum Kit | JavaScript30</title>
+  <title>02-Clock | JavaScript30</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link ref='stylesheet' href='normalize.css/normalize.css'>
   <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='drum-kit.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../../css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='clock.css'>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script async src='script.js'></script>
+  <script async src='../../js/script.js'></script>
+  <script async src='clock.js'></script>
 </head>
 
 <body>
   <main class='wrap'>
     <section id='codearea'>
       <section id='codewrap'>
-
+        <div class="clock">
+          <div class="clockface">
+            <div class="hand" id="hr-hand">
+            </div>
+            <div class="hand" id="min-hand">
+            </div>
+            <div class="hand" id="sec-hand">
+            </div>
+          </div>
+        </div>
       </section>
       <div class='scroll-down'>
         <div class='mouse'><span></span></div>
@@ -33,7 +43,7 @@
               <a href='/jschallenges/javascript30/'>← Back to JavaScript30</a>
             </div>
             <div class='column' id='blog-title'>
-              <p>Day 01: Drum Kit</p>
+              <p>Day 02: Clock</p>
             </div>
             <div class='column'>
               <ul id='social'>
@@ -52,7 +62,46 @@
       </nav>
 
       <section id='postarea'>
+        <h2 class="day">Day 02</h2>
+        <h1 class="title">Clock</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          Today's prompt is an analog clock, which seems simple enough, but I don't actually know how to transform
+          elements to rotate like that. A quick Google search tells me that there is indeed a transform property with
+          the rotate value; you can even specific
+          the axis upon which it's rotating. This brings me back to high school, sitting in math class calculating the
+          conversion of an angle's degree measurement to hours-minutes-seconds. Good times! I think it will probably be
+          relevant here.
+        </p>
+        <p>
+          Thinking through how it should work, this is what I came up with:
+        <ul>
+          <li>Get the time from the browser</li>
+          <li>Get the hours, minutes, and seconds</li>
+          <li>Convert those numbers to rotations needed for transform property</li>
+          <li>Apply rotations as the time updates</li>
+        </ul>
+        </p>
+        <p>Right now, I know how to get the time from the browser, and with some quick math I can determine how to get
+          the rotation conversions, but actually applying the JavaScript to do that is where I'm at a lost. In
+          particular, how will it always know what time it is? Do I just keep making calls to get the current time?</p>
+        <p>And that's what we're here to find out.</p>
 
+        <h3 class="section">Solution</h3>
+        <p>Per usual, I tried the problem without watching the full video first. This means setting up the HTML and CSS,
+          and then going through the JavaScript docs to look for what might be useful.</p>
+        <p>I found the setInterval function that allows for running functions every set interval that you set. That
+          solved my biggest point of confusion, so the rest was fairly easy. Doing some quick math gave me a formula for
+          calculating the degrees that the hands would be rotating at. The only thing is that with hours, you would
+          divide by 12 instead of 60 for seconds and minutes. A small blip was accounting for the 90 degrees that I'd
+          used to shift the hands to start at the 12.</p>
+
+        <h3 class="section">Lessons Learned</h3>
+        <p>For the most part the clock works now. However, there are issues in the way when the hands reach 0 or the 12,
+          they rotate all the way backwards to start again instead of just ticking forward. I wasn't sure how to fix it
+          and didn't want to invest too much more time in this one, so I left it here for now. If I were to extend it, I
+          would also want to add the numbers to the clock to increase readability. I just displayed the actual time in
+          the title for now.</p>
       </section>
     </section>
   </main>

@@ -1,0 +1,30 @@
+.clock {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 7px solid black;
+  margin: auto;
+  position: relative;
+}
+
+.hand {
+  top: 50%;
+  width: 50%;
+  height: 5px;
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
+
+#hr-hand {
+  background-color: navy;
+}
+
+#min-hand {
+  background-color: cornflowerblue;
+}
+
+#sec-hand {
+  background-color: deepskyblue;
+}
