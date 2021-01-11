@@ -20,11 +20,11 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 // 1. Filter the list of inventors for those who were born in the 1500's
 
 function bornInYear() {
-  var filtered = inventors.filter(inventor => inventor.year > 1499 && inventor.year < 1600);
+  let filtered = inventors.filter(inventor => inventor.year > 1499 && inventor.year < 1600);
 
-  var exercise1 = document.getElementById('exercise1');
+  let exercise1 = document.getElementById('exercise1');
   filtered.forEach(a => {
-    var p = document.createElement('p');
+    let p = document.createElement('p');
     p.innerHTML = `${a.first} ${a.last} (${a.year})`;
     exercise1.appendChild(p);
   })
@@ -34,10 +34,10 @@ function bornInYear() {
 // 2. Give us an array of the inventors' first and last names
 
 function firstLastNames() {
-  var list = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+  let list = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
 
-  var exercise2 = document.getElementById('exercise2');
-  var code = document.createElement('code');
+  let exercise2 = document.getElementById('exercise2');
+  let code = document.createElement('code');
   code.innerHTML = list;
   exercise2.appendChild(code)
 }
@@ -49,9 +49,9 @@ function oldToYoung() {
   inventors.sort((a, b) => {
     return a.year - b.year
   });
-  var exercise3 = document.getElementById('exercise3');
+  let exercise3 = document.getElementById('exercise3');
   inventors.forEach(a => {
-    var p = document.createElement('p');
+    let p = document.createElement('p');
     p.innerHTML = `${a.first} ${a.last} (${a.year})`;
     exercise3.appendChild(p);
   })
@@ -61,11 +61,11 @@ function oldToYoung() {
 // 4. How many years did all the inventors live?
 
 function addYears() {
-  var totalYears = inventors.reduce((total, inventor) => {
+  let totalYears = inventors.reduce((total, inventor) => {
     return total + (inventor.passed - inventor.year);
   }, 0);
 
-  var exercise4 = document.getElementById('exercise4');
+  let exercise4 = document.getElementById('exercise4');
   exercise4.innerHTML = `<p>Total years: ${totalYears}</p>`
 }
 
@@ -76,9 +76,9 @@ function yearsLived() {
     return (a.passed - a.year) - (b.passed - b.year);
   });
 
-  var exercise5 = document.getElementById('exercise5');
+  let exercise5 = document.getElementById('exercise5');
   inventors.forEach(a => {
-    var p = document.createElement('p');
+    let p = document.createElement('p');
     p.innerHTML = `${a.first} ${a.last} (${a.passed - a.year})`;
     exercise5.appendChild(p);
   })
@@ -93,9 +93,9 @@ function yearsLived() {
 
 function sortByLastName() {
   people.sort()
-  var exercise7 = document.getElementById('exercise7');
+  let exercise7 = document.getElementById('exercise7');
   people.forEach(a => {
-    var p = document.createElement('p');
+    let p = document.createElement('p');
     p.innerHTML = `${a}`;
     exercise7.appendChild(p);
   })
@@ -106,7 +106,7 @@ function sortByLastName() {
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
 
 function countItems() {
-  var dataCounts = data.reduce((counts, item) => {
+  let dataCounts = data.reduce((counts, item) => {
     if (item in counts) {
       counts[item]++
     } else {
@@ -114,11 +114,11 @@ function countItems() {
     }
     return counts;
   }, {});
-  var exercise8 = document.getElementById('exercise8');
-  var dataCountsKeys = Object.keys(dataCounts);
+  let exercise8 = document.getElementById('exercise8');
+  let dataCountsKeys = Object.keys(dataCounts);
   dataCountsKeys.forEach(a => {
-    var p = document.createElement('p');
-    var num = dataCounts[a];
+    let p = document.createElement('p');
+    let num = dataCounts[a];
     p.innerHTML = `${a}: ${num}`;
     exercise8.appendChild(p);
   })
@@ -132,21 +132,3 @@ addYears();
 yearsLived();
 sortByLastName();
 countItems();
-
-
-// For sticky nav when scrolling
-const nav = document.querySelector(".nav");
-const topOfNav = nav.offsetTop;
-const wrap = document.querySelector(".wrap");
-
-function fixNav() {
-  if (window.scrollY >= topOfNav) {
-    wrap.style.paddingTop = nav.offsetHeight;
-    wrap.classList.add("fixed-nav");
-  } else {
-    wrap.style.paddingTop = 0;
-    wrap.classList.remove("fixed-nav");
-  }
-}
-
-window.addEventListener("scroll", fixNav);
