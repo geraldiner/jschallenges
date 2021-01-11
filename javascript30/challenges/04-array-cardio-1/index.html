@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>04-Array Cardio 1 | JavaScript30</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link ref='stylesheet' href='normalize.css/normalize.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../../css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='array-cardio.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script async src='../../js/script.js'></script>
+  <script async src='array-cardio.js'></script>
+</head>
+
+<body>
+  <main class='wrap'>
+    <section id='codearea'>
+      <section id='codewrap'>
+        <h1>Array Cardio 1</h1>
+        <h2>Data Sets</h2>
+        <p>
+          <code>
+       const inventors = [
+       { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+       { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+       { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+       { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+       { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+       { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+       { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+       { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+       { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+       { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+       { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+       { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+       ];
+        </code>
+        </p>
+        <br>
+        <p>
+          <code>
+       const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];</code>
+        </p>
+
+        <h2>Exercise 1</h2>
+        <h3>Filter the list of inventors for those who were born in the 1500's.</h3>
+        <div id="exercise1">
+        </div>
+
+        <h2>Exercise 2</h2>
+        <h3>Give us an array of the inventors' first and last names.</h3>
+        <div id="exercise2">
+        </div>
+
+        <h2>Exercise 3</h2>
+        <h3>Sort the inventors by birthdate, oldest to youngest.</h3>
+        <div id="exercise3">
+        </div>
+
+        <h2>Exercise 4</h2>
+        <h3>How many years did all the inventors live?</h3>
+        <div id="exercise4">
+        </div>
+
+        <h2>Exercise 5</h2>
+        <h3>Sort the inventors by years lived.</h3>
+        <div id="exercise5">
+        </div>
+
+        <h2>Exercise 6</h2>
+        <h3>Create a list of Boulevards in Paris that contain 'de' anywhere in the name.</h3>
+        <div id="exercise6">
+          See blog post below for solution.
+        </div>
+
+        <h2>Exercise 7</h2>
+        <h3>Sort the people alphabetically by last name.</h3>
+        <div id="exercise7">
+        </div>
+
+        <h2>Exercise 8</h2>
+        <h3>Sum up the instances of each of these</h3>
+        <code>const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];</code>
+        <div id="exercise8">
+        </div>
+      </section>
+      <section class='scroll-down'>
+        <section class='mouse'><span></span></section>
+      </section>
+    </section>
+
+    <section id='post-wrap'>
+      <nav id='nav'>
+        <div class='nav-wrap'>
+          <div class='row'>
+            <div class='column'>
+              <a href='/jschallenges/javascript30/'>← Back to JavaScript30</a>
+            </div>
+            <div class='column' id='blog-title'>
+              <p>Day 04: Array Cardio 1</p>
+            </div>
+            <div class='column'>
+              <ul id='social'>
+                <li><a href='https://linkedin.com/in/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-linkedin'></i></a></li>
+                <li><a href='https://github.com/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-github'></i></a></li>
+                <li><a href='https://twitter.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-twitter'></i></a></li>
+                <li><a href='https: //instagram.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-instagram'></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id='postarea'>
+        <h2 class="day">Day 04</h2>
+        <h1 class="title">Array Cardio 1</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          Today is all about practicing <code>Array</code> methods, which is good because I think I'm really bad at it
+          right now. Maybe not really bad, but I can definitely improve. I know I especially struggle when it comes to
+          figuring out the best method to use and remember
+          what parameters each method takes in.
+        </p>
+        <p>
+          There are 8 exercises in all using the <code>filter</code>, <code>sort</code>, <code>map</code> and
+          <code>reduce</code> methods. I've used <code>filter</code> and <code>sort</code>, but not so much
+          <code>map</code> and <code>reduce</code>.
+        </p>
+
+        <h3 class="section" id="solution">Solution</h3>
+        <p>
+          For the first exercise, using the <code>filter</code> method, I put in conditional statements for the years to
+          be greater than 1499 but less than 1600 to only capture the years in the 1500's.
+        </p>
+        <p>
+          The second exercise uses the <code>map</code> method to create a list of just the first and last names of each
+          inventor. I didn't fully understand the <code>map</code> before. From my understanding it's like an assembly
+          line. You give it a set of instructions to follow to build
+          the elements that go into the array.
+        </p>
+        <p>
+          The third exercise is a simple <code>sort</code> method that compares the years of each element to find the
+          lowest to highest. I did mess up a bit when I initially thought the higher year number meant the person was
+          older. But that's backwards. The lower the year
+          number meant they were the older. So I just had to flip the <code>compare</code> function.
+        </p>
+        <p>
+          For the fourth exercise I had to watch the video because the documentation wasn't making a lot of sense to me.
+          I sitll don't quite fully understand how it works. It looks like a recursive function to me: a running total
+          gets added the ages of all the inventors.
+          And the last argument is what it starts with.
+        </p>
+        <p>
+          Exercise 5 is just an extension of exercise 3, except instead of the birthdate, it's the ages.
+        </p>
+        <p>
+          Exercise 6 was an exercise for this <a href="https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris"
+            target="_blank">Wikipedia page</a>, which I completed in the console. First I got the <code>div</code> that
+          all the links where in, and then took only
+          the links, which were all the boulevards in that list.
+        </p>
+        <p>
+          <code>
+  const category = document.querySelector('.mw-category'); 
+  const links = [...category.querySelectorAll(`a`)] 
+          </code>
+        </p>
+        <p>
+          Finally, we filter the links to only get the ones with 'de' in their names, and take only the
+          <code>textContent</code> of the links and put it into an array.
+        </p>
+        <p>
+          <code>
+            var des = links.filter(link => link.textContent.includes('de')) 
+  var de = des.map(d => d.textContent)
+          </code>
+        </p>
+        <p>
+          And so the final result looks like this:
+        </p>
+        <p>
+          <code>
+            ["Boulevard de l'Amiral-Bruix", "Boulevard des Capucines", "Boulevard de la Chapelle", "Boulevard de Clichy", "Boulevard de l'Hôpital", "Boulevard des Italiens", "Boulevard de la Madeleine", "Boulevard de Magenta", "Boulevard de Rochechouart", "Boulevard de Sébastopol", "Boulevard de Strasbourg", "Boulevard de la Zone"]
+          </code>
+        </p>
+        <p>
+          Exercise 7 was a simple <code>sort</code> on the people array since they were already listed by their last
+          names.
+        </p>
+        <p>
+          Exercise 8 was another <code>reduce</code> challenge, so I attempted it on my own, using the previous exercise
+          and Javascript documentation to guide me. At first, it was difficult because there are <code>strings</code>
+          instead of <code>numbers</code>, and we have to keep track of counts for
+          each string. This made me think that we probably want to use a dictionary with the <code>strings</code> as
+          <code>keys</code> and <code>counts</code> as the <code>values</code>. I hit a blip when none of the keys were
+          being stored, but I realized that I hadn't initialized the accumulator, and that
+          fixed it up.
+        </p>
+
+        <h3 class="section">Lessons Learned</h3>
+        <p>
+          These exercises really challenged me to look up the documentation for these methods. I didn't want to rely on
+          the video, so I tried them on my own first. However, some of the prompts are a little vague, like, "Give us an
+          array of the inventors' first and last names." Initially I thought I had to keep them as dictionary objects,
+          so I ended up with an array of dictionaries, when an array of strings is important. This is why clear
+          requirements documentation is important!
+        </p>
+        <p>
+          Today was refreshing. It reminded me that sometimes working on the foundations and basics is important to keep
+          moving forward. And not only did I get to work on <code>Array</code> methods, but also using the arrow
+          notation and template literals.
+        </p>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
