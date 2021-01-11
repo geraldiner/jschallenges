@@ -4,6 +4,9 @@
 
 .navbar a, .navbar a:hover, .navbar a:visited {
   text-decoration: none;
+}
+
+.navbar-light .navbar-text a {
   color: white;
 }
 
