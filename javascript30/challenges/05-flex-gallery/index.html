@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>05-Flex Gallery | JavaScript30</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link ref='stylesheet' href='normalize.css/normalize.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../../css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='flex-gallery.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script async src='../../js/script.js'></script>
+  <script async src='flex-gallery.js'></script>
+</head>
+
+<body>
+  <main class='wrap'>
+    <section id='codearea'>
+      <section id='codewrap'>
+        <h1>Click on the panels to see them expand.</h1>
+        <section class="panels">
+          <section class="panel panel1">
+            <p>Hey</p>
+            <p>Let's</p>
+            <p>Dance</p>
+          </section>
+          <section class="panel panel2">
+            <p>Give</p>
+            <p>Take</p>
+            <p>Receive</p>
+          </section>
+          <section class="panel panel3">
+            <p>Experience</p>
+            <p>It</p>
+            <p>Today</p>
+          </section>
+          <section class="panel panel4">
+            <p>Give</p>
+            <p>All</p>
+            <p>You can</p>
+          </section>
+          <section class="panel panel5">
+            <p>Life</p>
+            <p>In</p>
+            <p>Motion</p>
+          </section>
+        </section>
+      </section>
+      <section class='scroll-down'>
+        <section class='mouse'><span></span></section>
+      </section>
+    </section>
+
+    <section id='post-wrap'>
+      <nav id='nav'>
+        <div class='nav-wrap'>
+          <div class='row'>
+            <div class='column'>
+              <a href='/jschallenges/javascript30/'>← Back to JavaScript30</a>
+            </div>
+            <div class='column' id='blog-title'>
+              <p>Day 05: Flex Gallery</p>
+            </div>
+            <div class='column'>
+              <ul id='social'>
+                <li><a href='https://linkedin.com/in/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-linkedin'></i></a></li>
+                <li><a href='https://github.com/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-github'></i></a></li>
+                <li><a href='https://twitter.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-twitter'></i></a></li>
+                <li><a href='https: //instagram.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-instagram'></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id='postarea'>
+        <h2 class="day">Day 05</h2>
+        <h1 class="title">Flex Gallery</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          For today's prompt, we created a flex gallery, meaning the images are equally distributed across the width of
+          the page, and when clicked, animates to be a little bigger than the rest. There is also more text that
+          transitions into the image.
+        </p>
+        <p>
+          I decided to follow along with this video and used the starting file this time mostly because I didn't want to
+          have to look for the images myself. Looking at the HTML and CSS, the images are all in a <code>.panels</code>
+          container, and each <code>.panel</code> has a different background. There is styling to center the images and
+          for the transitions we will be adding.
+        </p>
+
+        <h3 class="section">Solution</h3>
+        <p>Most of the actual transitions are done with CSS, but we need JavaScript to listen to the events that trigger
+          the transitions, such as clicking the image we want to expand. By adding the <code>.open</code> and
+          <code>.open-active</code> classes to a panel, it will show the targeted image as bigger than the rest as well
+          as show the initially hidden text.
+        </p>
+        <p>In the JavaScript, we have event listeners for the click, to enlarge the image with <code>.open</code>, and
+          when this transition ends, to show the hidden text.</p>
+
+        <h3 class="section">Lessons Learned</h3>
+        <p>This was a nice short and sweet exercise today, and coincidentally, I was working on flex box on another
+          exercise to show a photo gallery with a modal/lightbox for when the images are clicked. I have just dived into
+          learning more about the <code>display: flex</code> and <code>flex-direction</code> properties, which I believe
+          forms the basis for frameworks like Bootstrap. I find it’s a lot more helpful and useful when you get a better
+          understanding of how things work under the hood instead of taking it as it is.</p>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
