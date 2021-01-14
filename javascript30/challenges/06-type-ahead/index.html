@@ -60,7 +60,45 @@
       </nav>
 
       <section id='postarea'>
+        <h2 class="day">Day 06</h2>
+        <h1 class="title">Ajax Type Ahead</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          For today's prompt, we created a search box that lists the cities that contains the text input, somewhat in
+          the same way Google search allows for text completion. We are pulling from an external json file that lists
+          cities and their populations.
+        </p>
+        <p>
+          I decided to follow along with this video and used the starting file this time because I was pressed for time.
+          Usually I'd try to set up the HTML and CSS myself, but couldn't today.
+        </p>
 
+        <h3 class="section">Solution</h3>
+        <p>First we set up a fetch for the endpoint of the data we were using, which is a json file. With the fetch we
+          attached a <code>.then</code> to turn the raw data into readable json, and another <code>.then</code> to push
+          the data to our cities array.</p>
+        <p>We then created a function called <code>findMatches</code> that takes in a <code>wordToMatch</code>, which is
+          the text we will be matching to the items in the cities array. Using a regex with the
+          <code>wordToMatch</code>, we use it in a filter to return all the matches in the cities
+          array.</p>
+        <p>Finally we have a <code>displayMatches</code> function that shows the matched items as you're typing. Again,
+          we use a regex to match the <code>wordToMatch</code> that was typed in, and use that to add a class on a
+          <code>span</code> to show it as highlighted.</p>
+
+        <h3 class="section">Reflection</h3>
+        <p>I really appreciate the bite-size-ness of these exercises. They're not too long and I always feel like I'm
+          learning something new in such a small time frame. I'd seen <code>fetch/then</code> used before, but never
+          really understood how it worked (and it
+          would've been massively helpful for the <a href="https://geraldiner.com/pokemonadoption"
+            target="_blank">Pokemon Adoption Site</a> I was building). I also got to work with regex more, which I
+          haven't touched in a hot minute. I'm learning all these
+          little things, and I'm really enjoying it!</p>
+        <p>
+          I think for future exercises, I will try to comment the code more, since it is a good practice to do so
+          when/if I'm passing my code along to someone else. I find that it also helps me to understand what's
+          happening, instead of just listening to Wes talk
+          to them in the video.
+        </p>
       </section>
     </section>
   </main>
