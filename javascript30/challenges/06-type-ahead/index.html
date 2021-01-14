@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>06-Type Ahead | JavaScript30</title>
+  <title>06-Ajax Type Ahead | JavaScript30</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link ref='stylesheet' href='normalize.css/normalize.css'>
   <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
@@ -41,7 +41,7 @@
               <a href='/jschallenges/javascript30/'>← Back to JavaScript30</a>
             </div>
             <div class='column' id='blog-title'>
-              <p>Day 06: Type Ahead</p>
+              <p>Day 06: Ajax Type Ahead</p>
             </div>
             <div class='column'>
               <ul id='social'>
@@ -80,12 +80,14 @@
         <p>We then created a function called <code>findMatches</code> that takes in a <code>wordToMatch</code>, which is
           the text we will be matching to the items in the cities array. Using a regex with the
           <code>wordToMatch</code>, we use it in a filter to return all the matches in the cities
-          array.</p>
+          array.
+        </p>
         <p>Finally we have a <code>displayMatches</code> function that shows the matched items as you're typing. Again,
           we use a regex to match the <code>wordToMatch</code> that was typed in, and use that to add a class on a
-          <code>span</code> to show it as highlighted.</p>
+          <code>span</code> to show it as highlighted.
+        </p>
 
-        <h3 class="section">Reflection</h3>
+        <h3 class="section">Lessons Learned</h3>
         <p>I really appreciate the bite-size-ness of these exercises. They're not too long and I always feel like I'm
           learning something new in such a small time frame. I'd seen <code>fetch/then</code> used before, but never
           really understood how it worked (and it
