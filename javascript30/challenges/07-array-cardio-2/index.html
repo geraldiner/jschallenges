@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>07-Array Cardio 2 | JavaScript30</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link ref='stylesheet' href='normalize.css/normalize.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../../css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='array-cardio.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script async src='../../js/script.js'></script>
+  <script async src='array-cardio-2.js'></script>
+</head>
+
+<body>
+  <main class='wrap'>
+    <section id='post-wrap'>
+      <nav id='nav'>
+        <div class='nav-wrap'>
+          <div class='row'>
+            <div class='column'>
+              <a href='/jschallenges/javascript30/'>← Back to JavaScript30</a>
+            </div>
+            <div class='column' id='blog-title'>
+              <p>Day 07: Array Cardio 2</p>
+            </div>
+            <div class='column'>
+              <ul id='social'>
+                <li><a href='https://linkedin.com/in/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-linkedin'></i></a></li>
+                <li><a href='https://github.com/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-github'></i></a></li>
+                <li><a href='https://twitter.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-twitter'></i></a></li>
+                <li><a href='https: //instagram.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-instagram'></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id='postarea'>
+        <h1>Array Cardio 2</h1>
+        <h2>Data Sets</h2>
+        <p>
+          <code>
+         const people = [
+         { name: 'Wes', year: 1988 },
+         { name: 'Kait', year: 1986 },
+         { name: 'Irv', year: 1970 },
+         { name: 'Lux', year: 2015 }
+         ];
+       </code>
+        </p>
+        <br>
+        <p>
+          <code>
+          const comments = [
+         { text: 'Love this!', id: 523423 },
+         { text: 'Super good', id: 823423 },
+         { text: 'You are the best', id: 2039842 },
+         { text: 'Ramen is my fav food ever', id: 123523 },
+         { text: 'Nice Nice Nice!', id: 542328 }
+         ];
+          </code>
+        </p>
+
+        <h2>Exercise 1</h2>
+        <h3>Is at least one person 19 or older?</h3>
+        <div id="exercise1">
+        </div>
+
+        <h2>Exercise 2</h2>
+        <h3>Is everyone 19 or older?</h3>
+        <div id="exercise2">
+        </div>
+
+        <h2>Exercise 3</h2>
+        <h3>Find the comment with the ID of 823423</h3>
+        <div id="exercise3">
+        </div>
+
+        <h2>Exercise 4</h2>
+        <h3>Find and delete the comment with the ID of 823423</h3>
+        <div id="exercise4">
+        </div>
+
+        <hr>
+        <h2 class="day">Day 07</h2>
+        <h1 class="title">Array Cardio 2</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          Today is day 2 of practicing <code>Array</code> methods, and these are methods I’d never really seen, let
+          alone use before.
+        </p>
+        <p>
+          There are 4 exercises, using the <code>some</code>, <code>every</code>, <code>find</code>, and
+          <code>findIndex</code> functions.
+        </p>
+
+        <h3 class="section" id="solution">Solution</h3>
+        <p>
+          These functions were simple enough for me to look at the documentation and figure out. I even got to practice
+          writing in arrow notation.
+        </p>
+        <p>
+          Some differences between my solutions and Wes’s is that he initialized a new <code>Date</code> object and used
+          the <code>getFullYear</code> function to get the current year. I just used ‘2018’, but I Wes’s version is
+          definitely better because the year will not always be 2018.
+        </p>
+        <p>
+          In the last exercise, he also used <code>spread (…)</code> again, which is very new to me. I’ll have to read
+          up on the documentation for that. This was for exercise 4 where we needed to delete the comment with a certain
+          <code>id</code>. Instead of just using <code>splice</code> on the original array, he created a new array using
+          <code>slice</code> on the old array and spreading it into the new array. He says it’s popular in the Redux
+          world, which I’ve heard of, but still don’t really know what it is. Even more reading and research!
+        </p>
+
+        <h3 class="section">Reflection</h3>
+        <p>
+          I’m really loving learning all these new things! I wish I had more time to learn more, but there is only so
+          much time in a day. And I cannot stress enough how much I appreciate these bite size lessons.
+        </p>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
