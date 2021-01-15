@@ -2,8 +2,8 @@
 // Get the canvas from the page and the context area for drawing. We also set the width and height to be the size of the window.
 const canvas = document.querySelector("#draw");
 const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth - 250;
-canvas.height = window.innerHeight - 200;
+canvas.width = window.innerWidth - 350;
+canvas.height = window.innerHeight - 300;
 
 // Setting the style of the drawing tool
 ctx.lineJoin = "round";
@@ -57,3 +57,8 @@ canvas.addEventListener("mousedown", e => {
 });
 canvas.addEventListener("mouseup", () => (isDrawing = false));
 canvas.addEventListener("mouseout", () => (isDrawing = false));
+
+window.document.querySelector('#reset').addEventListener('click', () => {
+  ctx.clearRect(0, 0, window.innerWidth - 350, window.innerHeight - 300)
+
+})
