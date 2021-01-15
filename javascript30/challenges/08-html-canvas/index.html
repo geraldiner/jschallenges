@@ -54,7 +54,37 @@
       </nav>
 
       <section id='postarea'>
+        <h2 class="day">Day 08</h2>
+        <h1 class="title">HTML Canvas</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          Today is creating a drawing canvas in HTML, which is pretty cool. I love colors so I am easily excited about
+          this one. I don’t know a lot about using the canvas in HTML, so I will be following along with the video. We
+          want to start drawing once the user
+          clicks the mouse. The color starts as red, but starts changing colors through the rainbow until it reaches red
+          again, and it starts all over again. It also starts as a small brush size and increases in size until it
+          reaches a certain size, and
+          then it will start decreasing.
+        </p>
 
+        <h3 class="section">Solution</h3>
+        <p>The only thing we needed on the HTML was the <code>canvas</code> tag set to a certain <code>width</code> and
+          <code>height</code>. In JavaScript, we grabbed the canvas and set a <code>context</code> to draw on. (I had to
+          look up what this all meant because I’d never heard of it before.) We have variables
+          to help keep track of the mouse’s movements while it’s on the page. However, with the event listeners, it only
+          draws when the mouse is being clicked.
+        </p>
+        <p>In our <code>draw</code> function, we use the mouse’s <code>offsetX</code> and <code>offsetY</code> values to
+          create a path, from where it was to where it’s going. If the mouse is moving really fast, then that means the
+          function is being called instantly one after the other. The colors
+          come from a <code>hue</code> variable that increments with each call, as does the line <code>width</code>. But
+          there is an <code>if</code> statement to check whether it’s gone to a specific size, and when it does reach
+          that size, it will start getting smaller again.</p>
+
+        <h3 class="section">Lessons Learned</h3>
+        <p>I started commenting my code so I could reiterate what was happening in each part of the code. I also think
+          it’s good practice for real industry work when I need to hand off my code to someone or someone else is
+          looking at the code for some reason.</p>
       </section>
     </section>
   </main>
