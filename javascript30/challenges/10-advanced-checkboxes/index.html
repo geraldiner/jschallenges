@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>09-Advanced Checkboxes | JavaScript30</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link ref='stylesheet' href='normalize.css/normalize.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../../css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='advanced-checkboxes.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script async src='../../js/script.js'></script>
+  <script async src='advanced-checkboxes.js'></script>
+</head>
+
+<body>
+  <main class='wrap'>
+    <section id='codearea'>
+      <section id='codewrap'>
+        <section class="inbox">
+          <section class="item">
+            <input type="checkbox">
+            <p>This is an inbox layout</p>
+          </section>
+          <section class="item">
+            <input type="checkbox">
+            <p>Check one item</p>
+          </section>
+          <section class="item">
+            <input type="checkbox">
+            <p>Hold down your Shift key</p>
+          </section>
+          <section class="item">
+            <input type="checkbox">
+            <p>Check a lower item</p>
+          </section>
+          <section class="item">
+            <input type="checkbox">
+            <p>Everything inbetween should also be set to checked</p>
+          </section>
+          <section class="item">
+            <input type="checkbox">
+            <p>w o w z a</p>
+          </section>
+          <section class="item">
+            <input type="checkbox">
+            <p>what the what?!</p>
+          </section>
+        </section>
+      </section>
+      <section class='scroll-down'>
+        <section class='mouse'><span></span></section>
+      </section>
+    </section>
+
+    <section id='post-wrap'>
+      <nav id='nav'>
+        <section class='nav-wrap'>
+          <section class='row'>
+            <section class='column'>
+              <a href='/jschallenges/javascript30/'>← Back to JavaScript30</a>
+            </section>
+            <section class='column' id='blog-title'>
+              <p>Day 10: Advanced Checkboxes</p>
+            </section>
+            <section class='column'>
+              <ul id='social'>
+                <li><a href='https://linkedin.com/in/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-linkedin'></i></a></li>
+                <li><a href='https://github.com/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-github'></i></a></li>
+                <li><a href='https://twitter.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-twitter'></i></a></li>
+                <li><a href='https: //instagram.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-instagram'></i></a></li>
+              </ul>
+            </section>
+          </section>
+        </section>
+      </nav>
+
+      <section id='postarea'>
+        <h2 class="day">Day 10</h2>
+        <h1 class="title">Advanced Checkboxes</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          Today’s project is to be able to check one item, and then by holding down the <code>Shift</code> key, you can
+          check a lower item, and it will check everything in between. I’ve put together a todolist before, so that part
+          is not bad. I took Wes’s starting HTML and
+          CSS for convenience and have been thinking about how to go about this.
+        </p>
+        <p>
+          This is something I use a lot in the Adobe CC, so it was cool to figure out how it works. What I first thought
+          is that we want to know which item on the list got checked first, then find out which item on the list got
+          checked second, and then everything
+          in between gets checked. So if item 1 got checked first, and item 5 got checked next, there would be some kind
+          of for loop or iterator that goes from 2-4 to check the items in between.
+        </p>
+        <p>
+          I had no idea how to do this in JavaScript, but I tried it without watching the video first anyway!
+        </p>
+
+        <h3 class="section">Solution</h3>
+        <p>I got about as far as getting all the inputs and putting an event listener on them. I started trying
+          different combinations of listening to when the <code>Shift</code> key was held down and setting the inputs in
+          between to ‘checked’. But I couldn’t figure out
+          how to know which box was checked first and which was checked second, or what identifier to give them, so I
+          could find them in the collection of inputs. Originally, I set variables ‘first’ and ‘next’ to keep track and
+          used them to find them in
+          the collection, so that I could iterate between them like bounds to set them as checked. But it didn’t work!
+        </p>
+        <p>Watching a few minutes into Wes’s solution, he used a brute-force kind of solution, where he loops over the
+          entire checklist from the first item that was check. And with the <code>Shift</code> key held down, there is
+          another variable inBetween that tells us
+          that we’re still in between the two checked items. So before watching him code it up, I tried again to do it
+          on my own first.</p>
+        <p>For the most part, I got it working, but it looked really messy. There were some things in Wes’s code that
+          were simplere, such as setting the inBetween to just the opposite of what it currently was, instead of a whole
+          if/else to change it.</p>
+
+        <h3 class="section">Reflection</h3>
+        <p>This one was a real challenge! But I learned a lot about how to keep the code simpler and shorter to be more
+          efficient. I’m also getting better at commenting my code. I’m going to try to implement this again with the
+          todolist I already have and
+          see how it goes.</p>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
