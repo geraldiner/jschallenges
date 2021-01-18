@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>11-Custom Video Player | JavaScript30</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link ref='stylesheet' href='normalize.css/normalize.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../../css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='video-player.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script async src='../../js/script.js'></script>
+  <script async src='video-player.js'></script>
+</head>
+
+<body>
+  <main class='wrap'>
+    <section id='codearea'>
+      <section id='codewrap'>
+        <h1>Custom Video Player</h1>
+        <section class="content">
+          <section class="player">
+            <video class="player__video viewer"
+              src="https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164"></video>
+
+            <section class="player__controls">
+              <section class="progress">
+                <section class="progress__filled"></section>
+              </section>
+              <button class="player__button toggle" title="Toggle Play">►</button>
+              <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+              <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
+              <button data-skip="-10" class="player__button">« 10s</button>
+              <button data-skip="25" class="player__button">25s »</button>
+              <button class="player__button full">⛶</button>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section class='scroll-down'>
+        <section class='mouse'><span></span></section>
+      </section>
+    </section>
+
+    <section id='post-wrap'>
+      <nav id='nav'>
+        <section class='nav-wrap'>
+          <section class='row'>
+            <section class='column'>
+              <a href='/jschallenges/javascript30/'>← Back to JavaScript30</a>
+            </section>
+            <section class='column' id='blog-title'>
+              <p>Day 11: Custom Video Player</p>
+            </section>
+            <section class='column'>
+              <ul id='social'>
+                <li><a href='https://linkedin.com/in/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-linkedin'></i></a></li>
+                <li><a href='https://github.com/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-github'></i></a></li>
+                <li><a href='https://twitter.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-twitter'></i></a></li>
+                <li><a href='https: //instagram.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-instagram'></i></a></li>
+              </ul>
+            </section>
+          </section>
+        </section>
+      </nav>
+
+      <section id='postarea'>
+        <h2 class="day">Day 11</h2>
+        <h1 class="title">Custom Video Player</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          For today’s challenge, we customized a video player in HTML. Again, I used the starter files for the HTML and
+          CSS. I took some time to look at what all the different parts were and how it was put together. Basically,
+          there are a lot of different divs
+          to replace the default controls with CSS to customize ths styling.
+        </p>
+        <p>
+          What we had to do next was set up the JavaScript to get all the elements that could be manipulated, i.e. the
+          controls, build the functions, and set up event listeners.
+        </p>
+
+        <h3 class="section">Solution</h3>
+        <p>
+          I did a ‘stop-and-go’ for this one, where I would watch a little bit to hear what we needed to do, and then
+          stopped the video so I could try the code on my own. For the most part, I could do it, and I just needed to do
+          some research on the video tag to
+          see what I had access to, what I could listen to, what I could change, etc.
+        </p>
+        <p>
+          There are 5 controls we set up: play/pause the video, setting the volume, setting the playback speed, skipping
+          forward and backwards, and scrubbing on the video duration.
+        </p>
+        <p>
+          To play/pause the video we setup an event listener on the play button and the video itself, to listen if
+          either of them has been clicked. If the video is paused (<code>video.paused = true</code>), the video will
+          play, and vice versa.
+        </p>
+        <p>
+          To set the volume and playback speed, the event listener is set up to listen for <code>changes</code> and
+          <code>mousemoves</code>. When either of these happens, we simply set the value of the video to the value we
+          get from the event.
+        </p>
+        <p>
+          To skip forward/backwards, the event listeners listens for clicks, and simply adds the seconds (from the
+          <code>data-skip</code> attribute), to the video’s current time.
+        </p>
+        <p>
+          The scrubbing was the most challenge. It is similar to the ranges, but also needs to take into account how
+          much of the progress bar needs to be filled. The property we’re using is <code>flexBasis</code>, which is in a
+          percentage. With some math, we calculate the percentage
+          using the current time and the duration of the video. Similarly, we calculate the time that’s been scrubbed to
+          using the <code>offsetX</code> of the click and the <code>offsetWidth</code> of the <code>progressBar</code>,
+          and set that scrub time to the video’s current time.
+        </p>
+        <p>
+          As an extra challenge, I also tried to set up a function to put the video into fullscreen. To be honest, it’s
+          still a little confusing, although I did read through the documentation over and over again. I think what
+          makes it most confusing is the different
+          <code>fullScreen</code> properties (?) for the different browsers.
+        </p>
+        <p>
+          We have a variable for a function called <code>fullscreenFunc</code>, which is the
+          <code>requestFullscreen</code> function for an element, which in this case is the video player. According to
+          the documentation, the <code>requestFullscreen</code> method makes a request for the element to
+          be displayed fullscreen. The <code>if</code> statement, sets the function to be whatever version the browser
+          needs.
+        </p>
+        <p>
+          In the actual function that runs when the fullscreen button is clicked, we call the
+          <code>fullscreenFunc</code> that was set on the video. This sends the request to be made fullscreen and if it
+          is clicked again, it will exit fullscreen.
+        </p>
+
+        <h3 class="section">Lessons Learned</h3>
+        <p>
+          Actually writing out that last part about the fullscreen mechanics helped me understand how it works a little
+          more clearly (go figure). What’s still confusing me is why the controls look different when it enters
+          fullscreen. In the CSS, there is the <code>:fullscreen</code>
+          selector on the <code>.player</code> div, but it only seems to stretch the div to fit the window. The controls
+          seem to return to the default controls.
+        </p>
+        <p>
+          Perhaps a mystery for another day. Right now I will revel in figuring out how to make it fullscreen!
+        </p>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
