@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>12-Key Sequence Detection | JavaScript30</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link ref='stylesheet' href='normalize.css/normalize.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../../css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='key-sequence.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script async src='../../js/script.js'></script>
+  <script async src='key-sequence.js'></script>
+</head>
+
+<body>
+  <main class='wrap'>
+    <section id='codearea'>
+      <section id='codewrap'>
+        <h1>Key Sequence Detection</h1>
+        <h3>Type in the password for your prize.</h3>
+        <p>Hint: 7 letters, rhymes with "tuna corn". </p>
+      </section>
+      <section class='scroll-down'>
+        <section class='mouse'><span></span></section>
+      </section>
+    </section>
+
+    <section id='post-wrap'>
+      <nav id='nav'>
+        <section class='nav-wrap'>
+          <section class='row'>
+            <section class='column'>
+              <a href='/jschallenges/javascript30/'>← Back to JavaScript30</a>
+            </section>
+            <section class='column' id='blog-title'>
+              <p>Day 12: Key Sequence Detection</p>
+            </section>
+            <section class='column'>
+              <ul id='social'>
+                <li><a href='https://linkedin.com/in/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-linkedin'></i></a></li>
+                <li><a href='https://github.com/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-github'></i></a></li>
+                <li><a href='https://twitter.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-twitter'></i></a></li>
+                <li><a href='https: //instagram.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-instagram'></i></a></li>
+              </ul>
+            </section>
+          </section>
+        </section>
+      </nav>
+
+      <section id='postarea'>
+        <h2 class="day">Day 12</h2>
+        <h1 class="title">Key Sequence Detection</h1>
+        <h3 class="section">Problem</h3>
+        <p>
+          Checking the duration of the video, I was surprised to see that it was only about 5 minutes! It does utilize
+          <code>cornify.js</code> for the extra end results, but it’s still mind-boggling to know what can be achieved
+          with only a few lines of code.
+        </p>
+        <p>
+          For this challenge, we needed a way to check the user’s keyboard input. If it matched a certain sequence, we
+          could do something to make that known, which in this case is displaying unicorn images.
+        </p>
+
+        <h3 class="section">Solution</h3>
+        <p>
+          We have two variables: an array to hold the keys that are pressed and the secret code that users are supposed
+          to type in.
+        </p>
+        <p>
+          We simply set up an event listener to check which keys are being pressed. These are pushed into the array, but
+          as more keys are being pressed, the least recent keys are pushed out. This is because the array is only kept
+          to the length of the secret code;
+          that way it doesn’t have to store so many items. Finally, we join the keys in the array to test it against the
+          secret code, and if they match, the unicorn is displayed.
+        </p>
+
+        <h3 class="section">Lessons Learned</h3>
+        <p>
+          This was a very simple challenge and I enjoyed it a lot. As I mentioned before, I really appreciate the
+          bite-size lessons. I imagine a similar mechanism is employed on websites that check for login and password
+          combinations, so it’s a great thing to learn.
+        </p>
+      </section>
+    </section>
+  </main>
+  <script src="https://www.cornify.com/js/cornify.js"></script>
+</body>
+
+</html>

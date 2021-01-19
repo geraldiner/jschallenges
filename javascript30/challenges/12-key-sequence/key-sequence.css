@@ -1,0 +1,19 @@
+.deleteLink {
+  color: red;
+  display: block;
+  cursor: pointer;
+  padding: 5px;
+  background-color: yellow;
+}
+
+#codearea h1, #codearea h2, #codearea h3, #codearea h4, #codearea h5, #codearea h6 {
+  margin: 1rem 0;
+}
+
+#codearea h3 {
+  font-size: 1.55rem;
+}
+
+#codearea p {
+  font-size: 1.15rem;
+}
