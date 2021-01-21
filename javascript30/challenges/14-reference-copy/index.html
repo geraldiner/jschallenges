@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>14-Reference vs. Copy | JavaScript30</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link ref='stylesheet' href='normalize.css/normalize.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../../css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='dev-tools.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script async src='../../js/script.js'></script>
+</head>
+
+<body>
+  <main class='wrap'>
+    <section id='post-wrap'>
+      <nav id='nav'>
+        <div class='nav-wrap'>
+          <div class='row'>
+            <div class='column'>
+              <a href='/jschallenges/javascript30/'>← Back to JavaScript30</a>
+            </div>
+            <div class='column' id='blog-title'>
+              <p>Day 14: Reference vs. Copy</p>
+            </div>
+            <div class='column'>
+              <ul id='social'>
+                <li><a href='https://linkedin.com/in/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-linkedin'></i></a></li>
+                <li><a href='https://github.com/geraldiner' rel='noopener' target='_blank'><i
+                      class='fa fa-github'></i></a></li>
+                <li><a href='https://twitter.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-twitter'></i></a></li>
+                <li><a href='https: //instagram.com/geraldinedesu' rel='noopener' target='_blank'><i
+                      class='fa fa-instagram'></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id='postarea'>
+        <h2 class="day">Day 14</h2>
+        <h1 class="title">Reference vs. Copy</h1>
+        <h3 class="section">Summary</h3>
+        <p>
+          This is another lesson where we’re not exactly building anything, but going over important distinctions
+          between references and copies, especially in <code>objects</code> and <code>arrays</code>.
+        </p>
+        <p>
+          With <code>strings</code>, <code>numbers</code>, and <code>booleans</code>, you can copy a variable to a new
+          variable, just by assigning it from one to the other.
+        </p>
+        <p>
+          <code>
+            var name = "geraldine"
+            <br>
+  var name2 = name;
+          </code>
+        </p>
+        <p>
+          And if you <code>console.log(name, name2)</code>, you will get
+        </p>
+        <p>
+          <code>
+            geraldine geraldine
+          </code>
+        </p>
+        <p>
+          And if you wanted to update one, without updating the other
+        </p>
+        <p>
+          <code>
+            name2 = "gigi"
+          </code>
+        </p>
+        <p>
+          And run <code>console.log(name, name2)</code> again, you will get
+        </p>
+        <p>
+          <code>
+            geraldine gigi
+          </code>
+        </p>
+        <p>
+          However, this does not work with <code>arrays</code> and <code>objects</code>. This:
+        </p>
+        <p>
+          <code>
+            var arr1 = [0, 1, 2, 3]
+            <br>
+            var arr2 = arr1
+          </code>
+        </p>
+        <p>
+          does not work in the same way that it does with <code>strings</code> in that it is only making a reference to
+          <code>arr1</code>, which we call <code>arr2</code>.
+        </p>
+        <p>
+          So, while <code>console.log(arr1, arr2)</code> will give us the same result, updating <code>arr2</code> will
+          also update <code>arr1</code>.
+        </p>
+        <p>
+          Output for <code>console.log(arr1, arr2)</code>:
+        </p>
+        <p>
+          <code>
+            [0, 1, 2, 3] // arr1
+            <br>
+            [0, 1, 2, 3] // arr2
+          </code>
+        </p>
+        <p>
+          Changing the first item in <code>arr2</code> will also change the first item in <code>arr1</code>.
+        </p>
+        <p>
+          <code>
+            arr2[0] = 9
+          </code>
+        </p>
+        <p>
+          Output for <code>console.log(arr1, arr2)</code>:
+        </p>
+        <p>
+          <code>
+            [9, 1, 2, 3] // arr1 
+            <br>
+            [9, 1, 2, 3] // arr2
+          </code>
+        </p>
+        <p>
+          To have two separate arrays, you have to actually make a copy of it, either by using <code>slice</code>,
+          <code>concat</code>, <code>spread (…)</code>, or <code>Array.from</code>.
+        </p>
+        <p>
+          With objects, you use <code>assign</code>, adding in all the properties you want to overwrite. However, you
+          still won’t be able to change properties afterwards. So you’d need to know beforehand everything you want to
+          change and use it in <code>assign</code>. He also mentioned a "poor man’s version" where you
+          <code>stringify</code> the object and then turn it back to JSON, and then change it as you wish.
+        </p>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
