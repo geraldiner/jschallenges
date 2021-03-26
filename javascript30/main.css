@@ -1,0 +1,12 @@
+.navbar {
+  background-color: #00b08a;
+}
+
+.navbar a, .navbar a:hover, .navbar a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.album {
+  margin-top: 80px;
+}

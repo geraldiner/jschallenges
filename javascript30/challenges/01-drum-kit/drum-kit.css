@@ -1,0 +1,204 @@
+.keys {
+  display: flex;
+  justify-content: space-between;
+}
+
+.key {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  transition: all 0.07s;
+  background-color: #1f9990;
+}
+
+.key kbd {
+  font-size: 32pt;
+  color: #fff;
+}
+
+.key span {
+  display: block;
+  font-size: 12pt;
+  color: #a9d6dc;
+}
+
+.playing {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 10px black;
+}
+
+/* CSS for page */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.codearea {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  background-color: #1f9990;
+  font-family: monospace;
+}
+
+.codearea h1 {
+  margin: 30px 0;
+}
+
+.code-wrap {
+  width: 80%;
+  margin: auto;
+  padding: 50px 0;
+  max-height: 100vh;
+}
+
+* a {
+  text-decoration: none;
+  position: relative;
+  color: #1f9990;
+}
+
+* a:hover {
+  color: initial;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+* a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #1f9990;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+* a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.post-wrap {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Roboto", sans-serif;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.nav {
+  margin-top: -40px;
+  position: relative;
+  background-color: white;
+  height: 40px;
+  line-height: 40px;
+  font-size: 10pt;
+  z-index: 1;
+  width: 100%;
+}
+
+.fixed-nav .nav {
+  position: fixed;
+  margin-top: 0;
+  top: 0px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-wrap {
+  padding: 0 8%;
+}
+
+.fixed-nav .postarea {
+  transform: scale(1);
+}
+
+.postarea {
+  padding: 70px 25%;
+  transform: scale(0.98);
+  transition: transform 0.5s;
+}
+
+h2.day {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 22pt;
+  font-weight: 300;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+h1.title {
+  font-family: "Oswald";
+  font-size: 40pt;
+  font-weight: 400;
+  margin-bottom: 50px;
+  color: #125954;
+}
+
+h3.section {
+  font-size: 10pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2pt;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+h3.section:not(:nth-child(3)) {
+  margin-top: 40px;
+}
+
+.postarea p {
+  font-size: 12pt;
+  line-height: 20pt;
+  margin-bottom: 15px;
+}
+
+.postarea ul {
+  font-size: 11.5pt;
+  line-height: 18pt;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media (max-width: 430px) {
+  .nav-wrap {
+    padding: 0 30px;
+  }
+
+  .nav {
+    line-height: initial;
+  }
+
+  .postarea {
+    padding: 50px 50px;
+  }
+}
