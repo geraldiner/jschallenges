@@ -29,6 +29,7 @@
 
 .playing {
   background-color: rgba(0, 0, 0, 0.9);
+  transition: all 0.07s;
   box-shadow: 0 0 10px black;
 }
 

@@ -17,7 +17,8 @@ function removeTransition(e) {
   this.classList.remove("playing");
 }
 
-const keys = document.querySelectorAll(".key");
+const keys = document.querySelectorAll("div.key");
+console.log(keys)
 keys.forEach(key => key.addEventListener("transitionend", removeTransition));
 
 // // For sticky nav when scrolling
