@@ -6,32 +6,33 @@ window.addEventListener("keydown", function (e) {
   if (!audio) return;
   audio.currentTime = 0;
   audio.play();
-  var div = document.querySelector(`div[data-key="${e.keyCode}"]`);
+  let div = document.querySelector(`div[data-key="${e.keyCode}"]`);
   div.classList.add("playing");
 });
 
 function removeTransition(e) {
-  if (e.propertyName !== "background-color") return;
-  // e.target.classList.remove("playing");
+  //if (e.propertyName !== "background-color") return;
+  console.log("HELLO")
+  e.target.classList.remove("playing");
   this.classList.remove("playing");
 }
 
 const keys = document.querySelectorAll(".key");
 keys.forEach(key => key.addEventListener("transitionend", removeTransition));
 
-// For sticky nav when scrolling
-const nav = document.querySelector(".nav");
-const topOfNav = nav.offsetTop;
-const wrap = document.querySelector(".wrap");
+// // For sticky nav when scrolling
+// const nav = document.querySelector("#stick-nav");
+// const topOfNav = nav.offsetTop;
+// const wrap = document.querySelector(".wrap");
 
-function fixNav() {
-  if (window.scrollY >= topOfNav) {
-    wrap.style.paddingTop = nav.offsetHeight;
-    wrap.classList.add("fixed-nav");
-  } else {
-    wrap.style.paddingTop = 0;
-    wrap.classList.remove("fixed-nav");
-  }
-}
+// function fixNav() {
+//   if (window.scrollY >= topOfNav) {
+//     wrap.style.paddingTop = nav.offsetHeight;
+//     wrap.classList.add("fixed-nav");
+//   } else {
+//     wrap.style.paddingTop = 0;
+//     wrap.classList.remove("fixed-nav");
+//   }
+// }
 
-window.addEventListener("scroll", fixNav);
+// window.addEventListener("scroll", fixNav);
