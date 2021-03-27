@@ -4,10 +4,11 @@
 
 .navbar a, .navbar a:hover, .navbar a:visited {
   text-decoration: none;
+  color: white;
 }
 
 .navbar a:hover {
-  color: white;
+  color: #1b1b1b;
 }
 
 .album {
