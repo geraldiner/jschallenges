@@ -1,20 +1,42 @@
-.navbar {
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+.keys {
+  display: flex;
+  justify-content: space-between;
+}
+
+.key {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  transition: all 0.07s;
   background-color: #00b08a;
 }
 
-.navbar a, .navbar a:hover, .navbar a:visited {
-  text-decoration: none;
+.key kbd {
+  font-size: 32pt;
+  color: #fff;
 }
 
-.navbar a:hover {
-  color: white;
+.key span {
+  display: block;
+  font-size: 12pt;
+  color: #a9d6dc;
 }
 
-.album {
-  margin-top: 80px;
+.playing {
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: all 0.07s;
+  box-shadow: 0 0 10px black;
 }
 
-/* CSS for pages */
+/* CSS for page */
 body {
   margin: 0;
   padding: 0;
